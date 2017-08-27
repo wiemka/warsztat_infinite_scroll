@@ -2,7 +2,9 @@
 
 $(function () {
     $(window).scroll(function () {
-        console.log("test" + scrollY);
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            console.log("test");
+        }
     });
 });
 
