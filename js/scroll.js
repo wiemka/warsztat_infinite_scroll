@@ -3,7 +3,16 @@
 $(function () {
     $(window).scroll(function () {
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-            console.log("test");
+            $.ajax({
+                url: "https://jsonplaceholder.typicode.com/users",
+                dataType: "json",
+                success: function (response) {
+                    console.log(response);
+                },
+                onerror: function (error) {
+
+                }
+            });
         }
     });
 });
