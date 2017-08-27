@@ -7,7 +7,14 @@ $(function () {
                 url: "https://jsonplaceholder.typicode.com/users",
                 dataType: "json",
                 success: function (response) {
-                    console.log(response);
+                    var beginOfData = document.createElement("p");
+                    var endOfData = document.createElement("p");
+
+                    beginOfData.innerHTML = "<br>...........BEGIN OF DATA...........<br><br>"
+                    endOfData.innerHTML = "<br>...........EDN OF DATA...........<br><br>"
+
+                    document.body.appendChild(beginOfData);
+                    document.body.appendChild(endOfData);
                 },
                 onerror: function (error) {
 
